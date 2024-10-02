@@ -1,0 +1,10 @@
+const express=require("express")
+const app=express()
+app.get("/home",(req,res)=>{
+    res.writeHead(201,{"content-type":"text/plain"})
+    // res.set("content-type","text/plain")
+    res.write("hello")
+    res.send("hello from server")
+//    res.end("hiii")
+})
+app.listen(3001,()=>console.log("server created"))
